@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="alert('Please enable the layout.css.has-selector.enabled flag in firefox config (about:config).')">
+
+    <div class="wrapper flex">
+
+      <div class="grid fullWH" style="grid-template-rows: 1fr 1fr; padding: 6.25%;">
+
+        <div class="box fullWH">
+
+        </div>
+
+        <div class="flex fullW fitH noselect" id="bottomRow" style="box-sizing: revert; grid-row: -1 / -2; align-self: end; justify-content: space-evenly;">
+          <div class="box battery">
+            <div class="background"></div>
+            <span>1</span>
+            <input type="checkbox" class="fullWH" style="position:absolute; opacity:0; z-index:top;">
+          </div>
+          <div class="box trackpad"></div>
+          <div class="box battery">
+            <span>2</span>
+            <input type="checkbox" class="fullWH" style="position:absolute; opacity:0; z-index:top;">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+  <!-- Empty script prevents animations from triggering on page load -->
+  <script type="text/javascript">
+
+  </script>
+
+</html>

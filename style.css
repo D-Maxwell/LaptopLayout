@@ -1,0 +1,143 @@
+/* [DEFAULTS] */
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body{
+  background-color: rgb(32,32,32);
+  font-family: "bahnschrift";
+  color: white;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+div{
+  /* width: 0;
+  height: 0; */
+  width: fit-content;
+  height: fit-content;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+
+.flex{ display: flex; }
+.flex *{ display: flex; }
+.flex.center{
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fullW{ width: 100%; }
+.fullH{ height: 100%; }
+.fullWH{
+  width: 100%;
+  height: 100%;
+}
+
+.fitW{ width: fit-content; }
+.fitH{ height: fit-content; }
+.fitWH{
+  width: fit-content;
+  height: fit-content;
+}
+
+
+.grid{ display: grid; }
+
+.noselect{
+  user-select: none;
+}
+
+
+
+/*[LOCALS]*/
+
+:root{
+  --label-clr: hsl(0deg,0%,36%);
+  --label-hover-clr: hsl(0deg,0%,54%)
+}
+
+.box{
+  background-color: rgb(48,48,48);
+  font-family: "Jetbrains Mono ExtraBold";
+  color: var(--label-clr);
+  border-radius: 1vmin;
+}
+
+
+.grid > #bottomRow > *{
+  width: 25%;
+  aspect-ratio: 2/1;
+}
+
+
+.battery{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  /* overflow: hidden; */
+
+  font-size: 6.25vh;
+
+  border: 3px solid #308430;
+  /* border: 3px solid transparent; */
+
+  transition: transform 100ms, border-color 200ms, color 200ms;
+}
+.battery:hover, .battery:active{
+  transform: perspective(400px) rotateX(4deg);
+  color: var(--label-hover-clr);
+  cursor: pointer;
+}
+/* .battery:active{ */
+.battery:has(input:checked){
+  border-color: white;
+}
+
+.battery::after{
+  content: '▼';
+  font-size: 0.5em;
+
+  text-align: center;
+  position: absolute;
+  bottom: 4px;
+
+  transition: filter 100ms, color 100ms;
+}
+.battery:hover::after{
+  color: var(--label-hover-clr);
+}
+.battery:has(input:checked)::after{
+  color: white;
+}
+
+/* .battery::before{
+  content: '';
+  position: absolute;
+  background-color: green;
+  width: 200%;
+  height: 200%;
+  animation: spin infinite 5s linear;
+  clip-path: inset(0);
+  z-index: -1;
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+} */
