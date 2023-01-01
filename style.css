@@ -95,13 +95,12 @@ div{
 
   transition: transform 100ms, border-color 200ms, color 200ms;
 }
-.battery:hover, .battery:active{
+.battery:hover{
   transform: perspective(400px) rotateX(4deg);
-  color: var(--label-hover-clr);
-  cursor: pointer;
 }
-/* .battery:active{ */
+
 .battery:has(input:checked){
+  color: var(--label-hover-clr);
   border-color: white;
 }
 
