@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body onload="alert('Please enable the layout.css.has-selector.enabled flag in firefox config (about:config).')">
+  <body onload="if(userAgent.match(/firefox|fxios/i)){alert('Please enable the layout.css.has-selector.enabled flag in firefox config (about:config).')}">
 
     <div class="wrapper flex">
 
