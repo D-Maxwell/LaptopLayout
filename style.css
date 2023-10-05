@@ -71,7 +71,8 @@ div{
 
 .box{
   background-color: rgb(48,48,48);
-  font-family: "Jetbrains Mono ExtraBold";
+  font-family: "Jetbrains Mono";
+  font-weight: 800;
   color: var(--label-clr);
   border-radius: 1vmin;
 }
