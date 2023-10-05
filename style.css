@@ -62,7 +62,7 @@ div{
 
 /*[LOCALS]*/
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap');
 
 :root{
   --label-clr: hsl(0deg,0%,36%);
