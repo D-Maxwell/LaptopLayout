@@ -117,10 +117,10 @@ div{
 
   transition: filter 100ms, color 100ms;
 }
-.battery:hover::after{
+.battery:hover::after, .battery:hover > span{
   color: var(--label-hover-clr);
 }
-.battery:has(input:checked)::after{
+.battery:has(input:checked)::after, .battery:has(input:checked) > span{
   color: white;
 }
 
